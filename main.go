@@ -1,7 +1,7 @@
 package main
 
 import (
-	"cloud-resource-tagging-validator/cmd"
+	"github.com/Cloud-Resource-Tagging-Validator/cmd"
 )
 
 func main() {
