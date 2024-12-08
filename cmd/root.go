@@ -10,7 +10,7 @@ import (
 const version = "1.0"
 
 var rootCmd = &cobra.Command{
-	Use:     "cloud-resource-tagging-validator",
+	Use:     "cli",
 	Short:   "Cloud Resource Tagging Validator",
 	Long:    "Cloud Resource Tagging Validator",
 	Version: version,
