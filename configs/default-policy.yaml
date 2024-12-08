@@ -1,0 +1,8 @@
+mandatory_tags:
+- "Environment"
+- "Owner"
+allowed_values:
+  Environment:
+  - "Production"
+  - "Development"
+  - "Staging"
