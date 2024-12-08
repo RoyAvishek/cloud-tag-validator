@@ -1,0 +1,8 @@
+# Ignore binaries
+/bin/
+# Ignore dependency directories
+/vendor/
+# Ignore Go build files
+*.exe
+*.out
+*.log
