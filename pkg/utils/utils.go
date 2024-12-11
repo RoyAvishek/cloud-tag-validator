@@ -14,9 +14,12 @@ type Policy struct {
 
 var policy Policy
 
-func init() {
+func GetPolicyDetails(pathValue string) {
 
-	yamlData, err := os.ReadFile("configs/default-policy.yaml")
+	// adding debug statement to test execution is in this block
+	fmt.Println("Fetching policy details")
+
+	yamlData, err := os.ReadFile(pathValue)
 	if err != nil {
 		os.Exit(1)
 	}

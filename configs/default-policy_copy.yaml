@@ -1,0 +1,22 @@
+mandatory_tags:
+- "Environment"
+- "Owner"
+- "AppName"
+- "Product"
+allowed_values:
+  Environment:
+  - "Production"
+  - "Development"
+  - "Staging"
+  Owner:
+  - "TeamA"
+  - "TeamB"
+  - "TeamC"
+  AppName:
+  - "AppA"
+  - "AppB"
+  - "AppC"
+  Product:
+  - "ProductA"
+  - "ProductB"
+  - "ProductC"
