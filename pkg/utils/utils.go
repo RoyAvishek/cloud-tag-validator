@@ -5,6 +5,8 @@ import (
 	"os"
 
 	"gopkg.in/yaml.v3"
+
+	"cloud-tag-validator/pkg/aws"
 )
 
 type Policy struct {
@@ -29,6 +31,19 @@ func GetPolicyDetails(pathValue string) {
 	}
 
 	// Print the unmarshaled data
-	fmt.Printf("%+v\n", policy)
+	// fmt.Printf("%+v\n", policy)
+
+}
+
+// Function to validate tags against the policy
+func ValidateTags() {
+	var resourceTags = aws.GetMockTags()
+
+	for _, tags := range resourceTags {
+		fmt.Println()
+		for key, value := range tags {
+			fmt.Printf("%s: %s\n", key, value)
+		}
+	}
 
 }

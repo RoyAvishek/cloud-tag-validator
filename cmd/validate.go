@@ -15,11 +15,10 @@ var validateCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		pathValue, _ := cmd.Flags().GetString("path")
 		// print path details for debugging
-		fmt.Println(pathValue)
 		if pathValue != "" {
-			utils.GetPolicyDetails(pathValue)
+			utils.ValidateTags()
 		} else {
-			fmt.Println("Please provide a valid flag")
+			fmt.Println("Not able to fetch the tags")
 		}
 	},
 }
