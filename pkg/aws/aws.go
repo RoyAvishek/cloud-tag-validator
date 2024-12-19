@@ -7,7 +7,7 @@ var mockTags = []map[string]interface{}{
 			"Environment": "Production",
 			"Owner":       "TeamA",
 			"AppName":     "AppA",
-			"Product":     "ProductA",
+			"Product":     "ProductABC",
 		},
 	},
 	{
@@ -21,11 +21,14 @@ var mockTags = []map[string]interface{}{
 	},
 }
 
-func GetMockTags() []map[string]string {
-	var tagsList []map[string]string
+func GetMockTags() []map[string]interface{} {
+	var tagsList []map[string]interface{}
 	for _, tag := range mockTags {
-		if t, ok := tag["Tags"].(map[string]string); ok {
-			tagsList = append(tagsList, t)
+		if tags, ok := tag["Tags"].(map[string]string); ok {
+			tagsList = append(tagsList, map[string]interface{}{
+				"ResourceARN": tag["ResourceARN"].(string),
+				"Tags":        tags,
+			})
 		}
 	}
 	return tagsList
